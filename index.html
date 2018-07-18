@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FCC - Survey Form</title>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="debug.css"> -->
+    <!-- <script>
+        function validateName(name) {
+            var n = document.getElementById('name');
+            var re = /[A-Za-z ']+$/m;
+            // console.log(re);
+            if (re.test(n.value)) {
+                return true
+            }
+            else if (!re.test(n.value)) {
+                alert('Enter valid name')
+                return false;
+            }
+        }
+
+    </script> -->
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <div id="outer-form">
+        <p id="description">Let us know how we can improve freeCodeCamp.</p>
+        <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+
+            <div class="row">
+                <div class="labels">
+                    <label id="name-label" for="Name">*Name:</label>
+                </div>
+                <div class="right-tab">
+                    <input autofocus type="text" name="Name" id="name" class="input-field" placeholder="Enter your name" required onblur="validateName(name)">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label id="email-label" for="email">*Email:</label>
+                </div>
+                <div class="right-tab">
+                    <input type="email" name="email" id="email" class="input-field" placeholder="someone@examle.com" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label for="age" id="number-label">*Age:</label>
+                </div>
+                <div class="right-tab">
+                    <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label for="currentPos"> Which option best describes your current role? </label>
+                </div>
+                <div class="right-tab">
+                    <select name="currentPos" id="dropdown" class="dropdown">
+                        <option disabled value="">Select an option</option>
+                        <option value="student">Student</option>
+                        <option value="job">Full time employed</option>
+                        <option value="learner">Full time learner</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label for="user rating" name="">How likely is that you would recommend freeCodeCamp to a friend? </label>
+                </div>
+                <div class="right-tab">
+                    <ul style="list-style: none; padding-left: 5px;">
+                        <li class="radio">
+                            <label>Definately
+                                <input type="radio" name="radio-buttons" value="1" class="userRatings">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Maybe
+                                <input type="radio" name="radio-buttons" value="2" class="userRatings">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Not Sure
+                                <input type="radio" name="radio-buttons" value="3" class="userRatings">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label for="most-like"> What do you like most is FCC? </label>
+                </div>
+                <div class="right-tab">
+                    <select name="mostlike" id="most-like" class="dropdown">
+                        <option disabled value="">Select an option</option>
+                        <option value="Challenges">Challenges</option>
+                        <option value="Projects">Projects</option>
+                        <option value="Community">Community</option>
+                        <option value="OpenSource">Open Source</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label for="improvements">What do you like to improve in FCC ? <br> (Selec all that apply)</label>
+                </div>
+                <div class="right-tab">
+                    <ul style="list-style: none; padding-left: 5px;">
+                        <li><label for="improvements">Front-end Projects
+                            <input type="checkbox" name="checkboxes" value="Front-end"  class="checkbox">
+                        </label></li>
+                        <li><label for="improvements">Backend-end Projects
+                            <input type="checkbox" name="checkboxes" value="Backend-end" class="checkbox">
+                        </label></li>
+                        <li><label for="improvements">Data Visualization
+                            <input type="checkbox" name="checkboxes" value="DataVisualization" class="checkbox">
+                        </label></li>
+                        <li><label for="improvements">Challenges
+                            <input type="checkbox" name="checkboxes" value="Challenges" class="checkbox">
+                        </label></li>
+                        <li><label for="improvements">Open Source Community
+                            <input type="checkbox" name="checkboxes" value="OpenSource" class="checkbox">
+                        </label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="labels">
+                    <label for="comments">Comments</label>
+                </div>
+                <div class="right-tab">
+                    <textarea style="margin-left: 5px" name="comments" id="comments" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="Submit" id="submit">
+
+
+
+
+        </form>
+    </div>
+    <!-- outer-form-end -->
+
+
+
+</body>
+
+</html>
